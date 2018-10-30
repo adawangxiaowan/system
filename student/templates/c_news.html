@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block title %}
-    <li><a href="/student/c_time/" id="a_leader_event" style="color: #1e242a;font-weight: bold;background-color: #66d9ef">近期要闻</a></li>
+    <li><a href="/student/c_news/" id="a_leader_event" style="color: #1e242a;font-weight: bold;background-color: #66d9ef" target="_self">近期要闻</a></li>
 {% endblock title %}
 
 {% block right %}
@@ -19,8 +19,8 @@
             </tr>
             {% for rec in recent %}
             <tr align="center" height="28px" style="line-height: 28px">
-                <td><a href="/post/{{ rec.id }}" target="_blank">{{ rec.created|date:'Y年m月d日' }}</a></td>
-                <td><a href="/post/{{ rec.id }}" target="_blank">{{ rec.title }}</a></td>
+                <td><a href="/student/post/{{ rec.id }}" target="_blank">{{ rec.created|date:'Y年m月d日' }}</a></td>
+                <td><a href="/student/post/{{ rec.id }}" target="_blank">{{ rec.title }}</a></td>
             </tr>
             {% endfor %}
     </table>

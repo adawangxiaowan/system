@@ -34,7 +34,7 @@
             <tr align="center" height="28px" style="line-height: 28px">
                 <td>{{ forloop.counter }}</td>
                 <td>{{ cpt.created|date:'Y年m月d日' }}</td>
-                <td colspan="1">{{ cpt.title }}</td>
+                <td colspan="1"><a href="/student/post/{{ cpt.id }}">{{ cpt.title }}</a></td>
             </tr>
             {% endfor %}
     </table>

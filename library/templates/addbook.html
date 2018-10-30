@@ -3,8 +3,8 @@
 
     {% block title %}
 
-            <li><a href="{% url 'index' %}" target="right" class="icon-home"> 首页</a></li>
-            <li><a href="#" id="a_leader_txt">网站信息</a></li>
+{#            <li><a href="{% url 'index' %}" target="right" class="icon-home"> 首页</a></li>#}
+{#            <li><a href="#" id="a_leader_txt">网站信息</a></li>#}
             <li><a href="{% url 'addbook' %}" id="a_leader_txt">图书登记</a></li>
             <li><a href="{% url 'bookdata' %}" id="a_leader_txt">图书展示</a></li>
 
@@ -44,8 +44,8 @@
                     <td colspan="3"><textarea name="introduce" id="" cols="62" rows="3"></textarea></td>
                 </tr>
                 <tr>
-                    <td colspan="2" align="right"><input type="submit" value="保存"></td>&emsp;
-                    <td colspan="2" align="left"><input type="reset" value="重置"></td>
+                    <td colspan="2" align="right"><input type="submit" value="保存">&emsp;</td>
+                    <td colspan="2" align="left">&emsp;<input type="reset" value="重置"></td>
                 </tr>
             </table>
             <p><a href="{% url 'bookdata' %}">返回展示页面</a></p>

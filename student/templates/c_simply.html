@@ -21,8 +21,8 @@
             </tr>
             {% for cpt in c_post %}
             <tr align="center" height="28px" style="line-height: 28px">
-                <td><a href="/post/{{ cpt.id }}" target="_blank">{{ cpt.created|date:'Y年m月d日' }}</a></td>
-                <td><a href="/post/{{ cpt.id }}" target="_blank">{{ cpt.title }}</a></td>
+                <td><a href="/student/post/{{ cpt.id }}" target="_blank">{{ cpt.created|date:'Y年m月d日' }}</a></td>
+                <td><a href="/student/post/{{ cpt.id }}" target="_blank">{{ cpt.title }}</a></td>
             </tr>
             {% endfor %}
     </table>
