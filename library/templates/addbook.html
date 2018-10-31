@@ -1,18 +1,31 @@
-{% extends 'base.html' %}
 
+{% extends 'base.html' %}
+{% load staticfiles %}
 
     {% block title %}
 
 {#            <li><a href="{% url 'index' %}" target="right" class="icon-home"> 首页</a></li>#}
 {#            <li><a href="#" id="a_leader_txt">网站信息</a></li>#}
-            <li><a href="{% url 'addbook' %}" id="a_leader_txt">图书登记</a></li>
+            <li><a href="{% url 'addbook' %}" id="a_leader_txt" style="background-color: skyblue">图书登记</a></li>
             <li><a href="{% url 'bookdata' %}" id="a_leader_txt">图书展示</a></li>
 
 
     {% endblock %}
 {% block right %}
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="{% static 'librarycss.css' %}">
+    </head>
+    <body>
 
 
+{#    运用form表单获取数据#}
         <form action="{% url 'addbook' %}" method="post">
             {% csrf_token %}
             <br/>
@@ -48,7 +61,9 @@
                     <td colspan="2" align="left">&emsp;<input type="reset" value="重置"></td>
                 </tr>
             </table>
-            <p><a href="{% url 'bookdata' %}">返回展示页面</a></p>
+{#            添加a标签可以跳转展示所有图书数据页面#}
+{#           <p class="toShow"><a href="{% url 'bookdata' %}">返回展示页面</a></p>#}
         </form>
-
+</body>
+    </html>
 {% endblock %}
